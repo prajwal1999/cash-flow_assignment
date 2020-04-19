@@ -1,6 +1,9 @@
 # cash-flo_assignment
 Cash-Flow intern assignment by Prajwal Dnyaneshwar Kamble 17D070024
 
+## GitHub Link
+[https://github.com/prajwal1999/cash-flow_assignment.git](https://github.com/prajwal1999/cash-flow_assignment.git)
+
 # Features
 - make login request with arbitrary non empty username and password
 - generate 50 x 50 thumbnail image form original image url
