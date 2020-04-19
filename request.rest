@@ -1,0 +1,20 @@
+GET http://localhost:3000/
+
+###
+GET  http://localhost:3000/compress
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYWp3YWwxOTk5IiwiaWF0IjoxNTg3Mjc0OTAyfQ.3odcZwZbnVgBM4uRg5qpqWyVi5ESh_5k9gps-lvA6_E
+Content-Type: application/json
+
+{
+    "imageUrl": "https://images.unsplash.com/photo-1587022899470-86edec4b1fd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+}
+
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "prajwal1999",
+    "password": "qazwsx123!@#"
+}
