@@ -1,4 +1,4 @@
-# cash-flow_assignment
+# cash-flo_assignment
 Cash-Flow intern assignment by Prajwal Dnyaneshwar Kamble 17D070024
 
 # Features
