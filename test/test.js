@@ -13,7 +13,7 @@ describe('POST /login', () => {
             password: "qw67%87GH"
         }
         chai.request(server).post("/login").send(data).end((err, result)=>{
-            result.should.have.status(403);
+            result.should.have.status(400);
             result.body.should.be.a("object");
             result.body.should.have.property("msg").eq("Invalid Credentials");
             done();
@@ -26,7 +26,7 @@ describe('POST /login', () => {
             password: ""
         }
         chai.request(server).post("/login").send(data).end((err, result)=>{
-            result.should.have.status(403);
+            result.should.have.status(400);
             result.body.should.be.a("object");
             result.body.should.have.property("msg").eq("Invalid Credentials");
             done();

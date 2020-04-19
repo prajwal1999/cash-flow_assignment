@@ -43,7 +43,7 @@ const login = (req, res)=>{
             "accessToken": accessToken,
         });
     } else {
-        res.status(403).send({
+        res.status(400).send({
             "msg": "Invalid Credentials"
         })
     }    
