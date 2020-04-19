@@ -22,7 +22,7 @@ Cash-Flow intern assignment by Prajwal Dnyaneshwar Kamble 17D070024
 ```
 
 # Usage
-### Login API
+### Authentication API
 Request
 ```rest
     POST http://localhost:3000/login/
@@ -54,7 +54,7 @@ OR
 
 ----
 
-### Thumbnail generation
+### Image Thumbnail Generation API
 Request
 ```
 GET  http://localhost:3000/compress
@@ -66,8 +66,4 @@ Payload: {
     "imageUrl": "https://images.unsplash.com/photo-1587022899470-86edec4b1fd7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
 }
 
-```
-Response
-```
-    
 ```

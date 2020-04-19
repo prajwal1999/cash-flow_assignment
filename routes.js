@@ -5,9 +5,9 @@ const jimp = require('jimp');
 const request = require('request');
 const fs = require('fs');
 
-// private function
+// private function to download image from url
 const download = (uri, filename) => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
         request.head(uri, (err, res) => {
             if(err) resolve({
                 "status": 404,
@@ -28,8 +28,8 @@ const download = (uri, filename) => {
                     "msg": "File is not an Image"
                 })
             }
-        })
-    })
+        });
+    });
 }
 
 // login function
@@ -49,13 +49,16 @@ const login = (req, res)=>{
     }    
 }
 
+// image thumbnail generation function
 const compress = async (req, res)=>{
     const result = await download(req.body.imageUrl, 'original');
     if(result.status === 200) {
         jimp.read(result.fileName, (err, lenna) => {
             if(err) res.status(500).send();
             lenna.resize(50, 50).write('thumbnail'+"."+result.fileName.split('.')[1]);
-            res.status(200).send();
+            res.status(200).send({
+                "thumbnail": lenna.bitmap.data
+            });
         });
     } else {
         res.status(result.status).send(result);
@@ -67,7 +70,3 @@ module.exports = {
     "compress": compress,
     "login": login
 }
-
-
-
-// https://www.google.com/images/srpr/logo3w.png

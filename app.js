@@ -7,9 +7,12 @@ const routes = require('./routes');
 
 app.use(bodyParser.json());
 
+// route for authenticating user
+app.post("/login", routes.login);
+
+// route for image thumbnail generation
 app.get('/compress', middleware.verifyToken, routes.compress);
 
-app.post("/login", routes.login);
 
 app.listen(3000);
 
